@@ -1,0 +1,23 @@
+{
+	"name": "hrs",
+	"version": "1.0.0",
+	"description": "Hotel Reservation System",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"dev-start": "nodemon app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Hasanka Madhushan",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongoose": "^5.12.7",
+		"validation": "0.0.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	}
+}
