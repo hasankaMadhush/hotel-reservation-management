@@ -1,0 +1,47 @@
+[
+  {
+    "occupancy": "single",
+    "board": "Bread & Breakfast",
+    "rate": 15
+  },
+  {
+    "occupancy": "double",
+    "board": "Bread & Breakfast",
+    "rate": 22
+  },
+  {
+    "occupancy": "triple",
+    "board": "Bread & Breakfast",
+    "rate": 27
+  },
+  {
+    "occupancy": "single",
+    "board": "Half Board",
+    "rate": 24
+  },
+  {
+    "occupancy": "double",
+    "board": "Half Board",
+    "rate": 34
+  },
+  {
+    "occupancy": "triple",
+    "board": "Half Board",
+    "rate": 39
+  },
+  {
+    "occupancy": "single",
+    "board": "Full Board",
+    "rate": 30
+  },
+  {
+    "occupancy": "double",
+    "board": "Full Board",
+    "rate": 38
+  },
+  {
+    "occupancy": "triple",
+    "board": "Full Board",
+    "rate": 45
+  }
+]

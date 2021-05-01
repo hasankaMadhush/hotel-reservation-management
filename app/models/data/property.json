@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Mango Sun",
+    "details": [" Lake view", "Bathtub", "Balcony", "500 Floor area(m2)", "Wifi"]
+  },
+  {
+    "name": " Mango Sea",
+    "details": ["Sea view", "Bathtub", "Balcony", "600 Floor area(m2)", "Wifi"]
+  },
+  {
+    "name": "Mango Hills",
+    "details": ["Mountain view", "Bathtub", "Balcony", "550 Floor area(m2)", "Wifi"]
+  }
+]
