@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import AppContainer from 'components/layout/AppContainer';
+
 function App() {
   return (
     <Router>
