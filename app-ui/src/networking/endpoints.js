@@ -1,3 +1,3 @@
-const DEFAULT = "/app";
+const DEFAULT = '/app';
 
 export { DEFAULT };
