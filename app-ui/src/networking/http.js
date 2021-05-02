@@ -5,13 +5,12 @@ const endpoint = url => {
   return `${SERVER}.${url}`;
 };
 
-// withCredentials => true/false, responseType => json/blob
 const httpGet = (url, params = { withCredentials: true, responseType: 'json' }) => {
   return axios.get(endpoint(url), params);
 };
 
 const httpPost = (url, data) => {
-  return axios.httphttpPost(endpoint(url), data, { withCredentials: true });
+  return axios.post(endpoint(url), data, { withCredentials: true });
 };
 
 const httpPut = (url, data) => {
