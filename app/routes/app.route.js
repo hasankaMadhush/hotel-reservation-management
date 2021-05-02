@@ -1,9 +1,17 @@
 const express = require('express');
 const router = new express.Router();
-const bookingService = require('../controllers/booking.controller');
+const bookingController = require('../controllers/booking.controller');
 
-router.get('/rates/property/:propertyId', bookingService.getRateByProperty);
+router.get('/rates/property/:propertyId', bookingController.getRateByProperty);
 
-router.get('/property', bookingService.getProperties);
+router.get('/property', bookingController.getProperties);
+
+router.get(
+  '/reservation/check/property/:propertyId/:checkIn/:checkout',
+  bookingController.checkBooking,
+);
+
+router.post('/reservation/book', bookingController.bookReservation);
+router.post('/reservation/cancel/:reservationId', bookingController.cancelReservation);
 
 module.exports = router;

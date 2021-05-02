@@ -5,6 +5,7 @@ const rates = require('../models/data/rates.json');
 const Property = require('../models/property.model');
 const Rate = require('../models/rate.model');
 
+// for development purpose creating properties and relevant rates
 const createInitialModels = () => {
   Property.find().then(results => {
     if (!results.length) {
@@ -12,7 +13,7 @@ const createInitialModels = () => {
         const Prop = new Property(property);
         Prop.save(error => {
           if (error) {
-            return console.log('error:', error);
+            return;
           }
           rates.forEach(rate => {
             rate.property = Prop._id;

@@ -22,7 +22,7 @@ app.get('/', (req, res) => res.status(200).json({ data: 'We are communicating' }
 
 createInitialModels();
 
-app.use('/app', passport.authenticate('jwt', { session: false }), appRoutes);
+app.use('/app', appRoutes);
 app.use('/auth', authRoutes);
 
 /* Error handler middleware */

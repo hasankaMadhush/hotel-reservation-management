@@ -1,3 +1,4 @@
+// Only for Development purpose, otherwise retrieve from wallet
 const env = process.env;
 
 const config = {
@@ -8,6 +9,7 @@ const config = {
     database: env.DB_NAME || 'hrm',
   },
   maxRoomsPerProperty: 3,
+  defaultCurrency: '$',
   defaultPropertyDetails: [
     'Sea view',
     'Lake view',
@@ -19,6 +21,9 @@ const config = {
   ],
   privateKey: 'mango',
   expiresIn: 3600, // 1 hour in seconds
+  email: 'mangohotes@example.com',
+  cancellationPriorHrs: 12,
+  cancellationFeePercentage: 20,
 };
 
 module.exports = config;

@@ -2,46 +2,55 @@
   {
     "occupancy": "single",
     "board": "Bread & Breakfast",
-    "rate": 15
+    "rate": 15,
+    "occupancyIndex": 0
   },
   {
     "occupancy": "double",
     "board": "Bread & Breakfast",
-    "rate": 22
+    "rate": 22,
+    "occupancyIndex": 0
   },
   {
     "occupancy": "triple",
     "board": "Bread & Breakfast",
-    "rate": 27
+    "rate": 27,
+    "occupancyIndex": 0
   },
   {
     "occupancy": "single",
     "board": "Half Board",
-    "rate": 24
+    "rate": 24,
+    "occupancyIndex": 1
   },
   {
     "occupancy": "double",
     "board": "Half Board",
-    "rate": 34
+    "rate": 34,
+    "occupancyIndex": 1
   },
   {
     "occupancy": "triple",
     "board": "Half Board",
-    "rate": 39
+    "rate": 39,
+    "occupancyIndex": 1
   },
   {
     "occupancy": "single",
     "board": "Full Board",
-    "rate": 30
+    "rate": 30,
+    "occupancyIndex": 2
   },
   {
     "occupancy": "double",
     "board": "Full Board",
-    "rate": 38
+    "rate": 38,
+    "occupancyIndex": 2
   },
   {
     "occupancy": "triple",
     "board": "Full Board",
-    "rate": 45
+    "rate": 45,
+    "occupancyIndex": 2
   }
 ]

@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const config = require('../config');
-
-const BOARD_TYPES = ['Bread & Breakfast', 'Half Board', 'Full Board'];
-const OCCUPANCY_TYPES = ['single', 'double', 'triple'];
-
-const RateSchema = Schema(
+const CancellationSchema = Schema(
   {
-    occupancyIndex: {
-      type: Number,
+    checkout: {
+      type: Date,
     },
     board: {
       type: String,
@@ -21,15 +16,17 @@ const RateSchema = Schema(
     },
     rate: {
       type: Number,
-      default: 0,
     },
     property: {
       type: mongoose.Types.ObjectId,
       ref: 'Property',
     },
-    currency: {
-      type: String,
-      default: config.defaultCurrency,
+    isCancelled: {
+      type: Boolean,
+      default: false,
+    },
+    cancellationTime: {
+      type: Date,
     },
   },
   {
@@ -37,4 +34,4 @@ const RateSchema = Schema(
   },
 );
 
-module.exports = mongoose.model('Rate', RateSchema);
+module.exports = mongoose.model('Cancellation', CancellationSchema);

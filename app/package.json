@@ -1,7 +1,7 @@
 {
-  "name": "hrs",
+  "name": "hrm",
   "version": "1.0.0",
-  "description": "Hotel Reservation System",
+  "description": "Hotel Reservation Management System",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -13,10 +13,12 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "dayjs": "^1.10.4",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.7",
+    "nodemailer": "^6.6.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "validation": "0.0.1"

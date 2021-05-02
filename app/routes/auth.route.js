@@ -7,20 +7,22 @@ const passport = require('passport');
 
 const router = new express.Router();
 
+// login
 router.post('/login', (req, res) => {
   const { email, password } = req.body;
   User.findOne({ email: email }).then(user => {
     // Check if user exists
     if (!user) {
-      return res.status(404).json({
+      res.json({
         success: false,
-        message: 'Please register to login',
+        message: 'Please sign up to login',
       });
     }
 
+    // validate password
     bcrypt.compare(password, user.password).then(isValidLogin => {
       if (!isValidLogin) {
-        return res.status(401).json({
+        return res.json({
           success: false,
           message: 'Password incorrect',
         });
@@ -43,11 +45,13 @@ router.post('/login', (req, res) => {
             res.json({
               success: false,
               message: err,
+              user: null,
             });
           }
           res.json({
             success: true,
             token: token,
+            user: user,
           });
         },
       );
@@ -55,15 +59,12 @@ router.post('/login', (req, res) => {
   });
 });
 
-router.post('/profile', passport.authenticate('jwt', { session: false }), (req, res) => {
-  res.send(req.user);
-});
-
+// registration
 router.post('/register', (req, res) => {
   const { name, email, password } = req.body;
   User.findOne({ email: email }).then(user => {
     if (user) {
-      return res.status(400).json({ email: `Already registered with ${email}` });
+      return res.json({ success: false, message: `Already registered with ${email}`, user: null });
     } else {
       const newUser = new User({
         name,
@@ -76,12 +77,22 @@ router.post('/register', (req, res) => {
           newUser.password = hash;
           newUser
             .save()
-            .then(user => res.json(user))
+            .then(user =>
+              res.json({
+                success: true,
+                message: 'successfully registered, Please sign in',
+                user: user,
+              }),
+            )
             .catch(err => console.log(err));
         });
       });
     }
   });
+});
+
+router.get('/profile', passport.authenticate('jwt', { session: false }), (req, res) => {
+  res.send(req.user);
 });
 
 module.exports = router;
